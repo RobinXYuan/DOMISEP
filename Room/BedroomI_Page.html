@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOMISEP</title>
+    <link href="BedroomI_Page.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" charset="utf-8"></script>
+    <!--This is the script for show and hide side bar-->
+    <script type="text/javascript">
+        $(function () {
+            $a = $(window).height();
+            $("#sidebar").height($a);
+            $("#collapse_btn").click(function () {
+                $("#sidebar").animate({left: '-280px'});
+                $("#show_btn").delay(500).animate({left: '0'});
+            });
+            $("#show_btn").click(function () {
+                $("#show_btn").animate({left: '-50px'});
+                $("#sidebar").delay(500).animate({left: '0'});
+            });
+        });
+    </script>
+
+    <!--This is the script for highlight the selected line-->
+    <script type="text/javascript">
+        $(function () {
+
+            $(".side_info dd").hide();
+            $(".side_info dl").mouseover(function () {
+
+                        $(this).css({
+                            "background-color": "rgba(30, 150, 237, 0.8)"
+                        });
+                    }
+            )
+            $(".side_info dl").mouseleave(function () {
+                $(".side_info dl").css({
+                    "background-color": " rgba(17, 26, 41, 0)"
+                });
+
+            })
+        })
+    </script>
+
+    <!--This is the script for show and hide second level menu-->
+    <script type="text/javascript">
+        $(function () {
+
+            $(".side_info dt").mouseover(function () {
+
+                        $(this).css({
+                            "background-color": "rgba(30, 150, 237, 0.8)"
+                        });
+                        $(this).stop(false, true).parent().find('dd').slideDown(300);
+                    }
+            )
+            $(".side_info dl").mouseleave(function () {
+
+                $(".side_info dt").css({
+                    "background-color": " rgba(17, 26, 41, 0"
+                });
+
+                $(this).parent().find('dd').stop(true, true).slideUp(300);
+
+            })
+        })
+    </script>
+</head>
+<body>
+
+<div id="Page_header">
+    <table class="header">
+        <tr>
+            <td style="width: 500px; text-align: left;">
+                <img src="../source/icon2.png" width="40" height="40" style="margin-left: 10px; margin-bottom: 2px">
+                <span style="color: white; font-family: Verdana; font-size: 28px; margin-left: 20px;">DOMISEP</span>
+            </td>
+            <td style="width: 1380px; text-align: right; margin-right: 25px">
+                <img src="../source/icon1.png">
+                <input class="search" placeholder="search">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="sidebar">
+    <li class="List"><img src="../source/photo.png" class="user_photo"></li>
+    <div class="side_info">
+        <dl class="list_room">
+            <dt>
+                <img src="../source/icon2.png" width="23" height="23"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <span class="Tab">Room</span>
+            </dt>
+            <dd class="first_dd">
+                <a href="#">
+                    <img src="../source/Tab1.png" width="24" height="20"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" href="MainPage1.html">Living Room</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab7.png" width="23" height="17"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" href="BedroomI_Page.html">Bedroom I</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab7.png" width="23" height="17"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab">Bedroom II</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab8.png" width="25" height="28"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab">Kitchen</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab9.png" width="25" height="24"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab">Garden</a>
+                </a>
+            </dd>
+        </dl>
+
+        <dl class="list_sensor">
+            <dt>
+                <img src="../source/icon2.png" width="23" height="23"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <a class="Tab">Sensor</a>
+            </dt>
+
+            <dd class="first_dd">
+                <a href="#">
+                    <img src="../source/icon2.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab">Temperature</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/icon2.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab">Humidity</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab12.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab">Smoke</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab13.png" width="23" height="19"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab">Window</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/icon2.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab">Camera</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/icon2.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab">Door</a>
+                </a>
+            </dd>
+        </dl>
+
+        <dl class="List">
+            <dt>
+                <img src="../source/Tab2.png" width="22" height="14"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <a class="Tab">Message</a>
+            </dt>
+        </dl>
+
+        <dl class="List">
+            <dt>
+                <img src="../source/Tab3.png" width="20" height="20"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <a class="Tab">Settings</a>
+            </dt>
+        </dl>
+
+        <dl class="List">
+            <dt>
+                <img src="../source/Tab4.png" width="16" height="20"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <a class="Tab">Account</a>
+            </dt>
+        </dl>
+
+        <dl class="List">
+            <dt>
+                <img src="../source/Tab5.png" width="20" height="20"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <a class="Tab">Help</a>
+            </dt>
+        </dl>
+    </div>
+
+    <div id="collapse_btn">
+        <img src="../source/Tab6.png" width="20" height="20"
+             style="vertical-align: middle; margin-left: 25px; margin-bottom: 10px">
+        <span class="collapse">Collapse Menu</span>
+    </div>
+
+</div>
+
+<div id="show_btn">
+    <img src="../source/Tab6.png" width="20" height="20" style="margin-bottom: -30px">
+</div>
+
+<div id="main">
+    <div class="main_title">
+        <img src="../source/TabTitle.png" class="img_main_title">
+        <span class="text_main_title">Bedroom I</span>
+    </div>
+
+    <div class="sensor1">
+        <table class="panel_title">
+            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+                <img src="../source/Tab12.png">
+            </td>
+
+            <td>
+                <span>Temperature</span>
+            </td>
+        </table>
+    </div>
+
+    <div class="sensor2">
+        <table class="panel_title">
+            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+                <img src="../source/Tab12.png">
+            </td>
+
+            <td>
+                <span>Humidity</span>
+            </td>
+        </table>
+    </div>
+
+    <div class="sensor3">
+        <table class="panel_title">
+            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+                <img src="../source/Tab12.png">
+            </td>
+
+            <td>
+                <span>Smoke</span>
+            </td>
+        </table>
+    </div>
+
+    <div class="sensor4">
+        <table class="panel_title">
+            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+                <img src="../source/Tab12.png">
+            </td>
+
+            <td>
+                <span>Window</span>
+            </td>
+        </table>
+    </div>
+
+    <div class="sensor5">
+        <table class="panel_title">
+            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+                <img src="../source/Tab12.png">
+            </td>
+
+            <td>
+                <span>Camera</span>
+            </td>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
