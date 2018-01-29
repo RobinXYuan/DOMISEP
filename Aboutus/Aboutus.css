@@ -1,0 +1,131 @@
+body{
+    background-image: url("../source/Do2.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    vertical-align: middle;
+    border: none;
+}
+
+dl, dt, dd{
+    display: block;
+    margin: 0;
+}
+
+dt{
+    vertical-align: middle;
+    line-height: 50px;
+    margin-left: -30px;
+    list-style-type: none;
+    padding: 0;
+}
+
+dd{
+    vertical-align: middle;
+    line-height: 50px;
+    margin-left: -30px;
+    list-style-type: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width:0px
+}
+
+/*This part is for the header*/
+#Page_header{
+    background-color: rgba(17, 26, 41, 0.5);
+    text-align: right;
+    /*padding: 5px;*/
+}
+
+.header{
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.search{
+    margin-right: 5px;
+    border-radius: 3px;
+    border-style: none;
+    background-color: #1d2532;
+    font-family: Verdana;
+    font-size: 10px;
+    width: 12%;
+    height: 20px;
+    color: white;
+}
+
+/*This part is for the body of the web page*/
+#main{
+    display: table-cell;
+}
+
+.main_title{
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+.img_main_title{
+    margin-bottom: 14px;
+}
+
+.text_main_title{
+    margin-left: 10px;
+    font-size: 36px;
+    font-family: Frutiger;
+    color: #ffffff;
+}
+
+.personnage{
+    float: left;
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 5%;
+    width: 300px;
+    position: relative;
+    height: 420px;
+    background-color: rgba(17, 26, 41, 0.8);
+}
+
+.per_photo{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.per_photo img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.per_photo p{
+    font-family: Verdana;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.per_container{
+    width: 90%;
+    font-family: Verdana;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.per_container li{
+    margin: 12px;
+}

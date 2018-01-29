@@ -35,6 +35,14 @@ dd{
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width:0px
+}
+
 /*This part is for the header*/
 #Page_header{
     background-color: rgba(17, 26, 41, 0.5);
@@ -150,6 +158,68 @@ dd{
     border-radius: 3px 0px 0px 5px;
 }
 
+.black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 26, 41, 0.6);
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    /*filter: alpha(opacity=80);*/
+}
+
+.content {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    /*border: 16px solid lightblue;*/
+    background-color: rgba(17, 26, 41, 0.8);
+    z-index:1002;
+    overflow: auto;
+}
+
+#door_status1{
+    float: left;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+#door_status1 img{
+    width: 70%;
+    height: 70%;
+}
+
+#door_status2{
+    float: right;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+#door_status2 img{
+    width: 70%;
+    height: 70%;
+}
+
+.white_content_small {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 50%;
+    border: 16px solid lightblue;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+}
+
 /*This part is for the body of the web page*/
 #main{
     display: table-cell;
@@ -218,10 +288,10 @@ dd{
 .sensor5{
     float: left;
     margin-left: 60px;
-    margin-top: 50px;
-    width: 860px;
+    margin-top: 20px;
+    width: 600px;
     position: relative;
-    height: 360px;
+    height: 380px;
     background-color: rgba(17, 26, 41, 0.8);
 }
 
@@ -282,6 +352,44 @@ dd{
 
 #now_hum {
     margin-left: 40%;
+}
+
+/*For the smoke sensor*/
+.smoke_light{
+    position:relative;
+    width:100px;
+    height:10px;
+    margin:30px auto;
+    line-height:30px;
+    border:1px solid #1e96ed;
+    border-radius:5px;
+    color:#fff;
+    text-align:center;
+    cursor:pointer;
+    box-shadow:0 1px 2px rgba(0,0,0,.3);
+    overflow:hidden;
+    background-image:
+    -webkit-gradient(linear, left top, left bottom, from(#6cc3fe), to(#1e96ed));
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-name: breathe;
+    -webkit-animation-duration: 2700ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes breathe {
+    0% { opacity: .2; box-shadow:0 1px 2px rgba(255,255,255,0.1);}
+    100% { opacity: 1; border:1px solid rgba(59,235,235,1);
+        box-shadow:0 1px 30px rgba(59,255,255,1);}
+}
+
+.smoke_status{
+    font-size: 36px;
+    font-family: Frutiger;
+    color: #ffffff;
+    width:100px;
+    height:30px;
+    margin:40px auto;
 }
 
 /*For the window sensor*/
@@ -488,3 +596,10 @@ input[type="checkbox"].Window2_status:checked + div > div
     -moz-transform: translate3d(16px, 0, 0);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), 0px 0px 0 1px rgba(8, 80, 172,1);
 }*
+
+ .camera_video{
+     height: 270px;
+     width: 480px;
+     margin-left: 10%;
+     margin-top: 15px;
+ }

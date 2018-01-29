@@ -1,0 +1,33 @@
+.main{
+    border: 1px solid black;
+    width: 700px;
+    height: 230px;
+}
+
+table{
+    margin-left: 0;
+    width: 600px;
+    text-align: left;
+}
+
+button{
+    border-radius: 100%;
+    border: none;
+    height: 50px;
+    width: 50px;
+    background: black;
+    color: white;
+    font-family: Verdana;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 3px 2px;
+    cursor: pointer;
+}
+
+input{
+    width: 300px;
+}
+
+.btn{
+    width: 600px;
+    text-align: center;
+}

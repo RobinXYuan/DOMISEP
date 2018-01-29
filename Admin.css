@@ -1,0 +1,209 @@
+body{
+    background-image: url("../source/Do2.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    vertical-align: middle;
+    border: none;
+}
+
+dl, dt, dd{
+    display: block;
+    margin: 0;
+}
+
+dt{
+    vertical-align: middle;
+    line-height: 50px;
+    margin-left: -30px;
+    list-style-type: none;
+    padding: 0;
+}
+
+dd{
+    vertical-align: middle;
+    line-height: 50px;
+    margin-left: -30px;
+    list-style-type: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width:0px
+}
+
+/*This part is for the header*/
+#Page_header{
+    background-color: rgba(17, 26, 41, 0.5);
+    text-align: right;
+    /*padding: 5px;*/
+}
+
+.header{
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.search{
+    margin-right: 5px;
+    border-radius: 3px;
+    border-style: none;
+    background-color: #1d2532;
+    font-family: Verdana;
+    font-size: 10px;
+    width: 12%;
+    height: 20px;
+    color: white;
+}
+
+/*This part is for the body of the web page*/
+#main{
+    display: table-cell;
+}
+
+.main_title{
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+.img_main_title{
+    margin-bottom: 14px;
+}
+
+.text_main_title{
+    margin-left: 10px;
+    font-size: 36px;
+    font-family: Frutiger;
+    color: #ffffff;
+}
+
+.add_room{
+    margin-top: 10px;
+}
+
+.text_title{
+    margin-top: 30px;
+    margin-left: 60px;
+    font-size: 28px;
+    font-family: Frutiger;
+    color: #ffffff;
+}
+
+.add_room{
+    float: left;
+}
+
+#add_user_room{
+    width: 500px;
+    margin-top: 10px;
+    vertical-align: middle;
+    font-size: 28px;
+    font-family: Frutiger;
+    color: #ffffff;
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+#add_user_room span{
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 24px;
+    font-family: Frutiger;
+    color: #ffffff;
+}
+
+#add_user_room input{
+    border-radius: 3px;
+    border-style: none;
+    margin-left: 30px;
+    font-family: Verdana;
+    font-size: 14px;
+    padding: 3px;
+    width: 100%;
+    height: 25px;
+}
+
+#add_user_room select{
+    margin-left: 30px;
+    height: 25px;
+    width: 180px;
+    font-size: 14px;
+    font-family: Verdana;
+}
+
+#add_user_room option{
+    margin-left: 30px;
+    height: 25px;    
+}
+
+.add_sensor{
+    margin-left: 100px;
+    float: right;
+    margin-top: 11px;
+}
+
+#add_user_sensor{
+    margin-top: 0px;
+    vertical-align: middle;
+    font-size: 28px;
+    font-family: Frutiger;
+    color: #ffffff;
+    border-collapse: separate;
+    border-spacing: 23px;
+}
+
+#add_user_sensor span{
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 24px;
+    font-family: Frutiger;
+    color: #ffffff;
+}
+
+#add_user_sensor input{
+    border-radius: 3px;
+    border-style: none;
+    margin-left: 30px;
+    font-family: Verdana;
+    font-size: 14px;
+    padding: 3px;
+    width: 100%;
+    height: 25px;
+}
+
+#add_user_sensor select{
+    margin-left: 30px;
+    height: 25px;
+    width: 180px;
+    font-size: 14px;
+    font-family: Verdana;
+}
+
+#add_user_sensor option{
+    margin-left: 30px;
+    height: 25px;    
+}
+
+.btn_add{
+    width: 150px;
+    height: 36px;
+    background-color: #1e96ed;
+    border-style: none;
+    border-radius: 3px;
+    color: white;
+    font-family: Verdana;
+    font-size: 22px;
+    margin: 0 auto;
+}

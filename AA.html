@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function checkupwd()
+        {
+            var upwd = document.getElementById("password").value;
+            if(upwd.length <8)
+            {
+                document.getElementById("upwd_info").innerHTML = "<font size=2 color=red>login trop court!</font>";
+                return false;
+            }
+
+            else{
+                document.getElementById("upwd_info").innerHTML = "<font size=2 color=green>OK</font>";
+
+                return true;
+            }
+        }
+        function checkupwd2()
+        {
+            var upwd = document.getElementById("password").value;
+            var upwd2 = document.getElementById("password2").value;
+            if(upwd!=upwd2)
+            {
+                document.getElementById("upwd_info2").innerHTML = "<font size=2 color=red>X</font>";
+                return false;
+            }
+
+            else{
+                document.getElementById("upwd_info2").innerHTML = "<font size=2 color=green>OK</font>";
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+<form action="3.php" method="post" >
+    <font color="black">login:</font>
+    <input  type="text" name="username"/>
+    </br>
+    <font color="black">password:</font>
+    <input  type="password" id="password" name="password" onChange="checkupwd()"
+            onblur="checkupwd()" />
+    <span id="upwd_info"></span>
+    </br>
+    password(repeat):
+    <input type="password" id="password2" name="password2" onChange="checkupwd2()"
+           onblur="checkupwd2()" />
+    <span id="upwd_info2"></span>
+    </br>
+    <input type="submit" name="submit" value="envoyer" />
+</form>
+</body>
+</html>

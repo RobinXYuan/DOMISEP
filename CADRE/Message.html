@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOMISEP</title>
+    <link href="Message.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!--This is the script for show and hide side bar-->
+    <script type="text/javascript" src="../JavaScript/Hideshow_Bar.js"></script>
+
+    <!--This is the script for highlight the selected line-->
+    <script type="text/javascript" src="../JavaScript/Highlight_Level.js"></script>
+
+    <!--This is the script for show and hide second level menu-->
+    <script type="text/javascript" src="../JavaScript/Hideshow_Level.js"></script>
+
+    <script type="text/javascript" src="../Sensor/Door.js"></script>
+</head>
+<body>
+<div id="main">
+    <div class="main_title">
+        <img src="../source/TabTitle.png" class="img_main_title">
+        <span class="text_main_title">Message</span>
+    </div>
+
+    <div id="fade" class="black_overlay">
+
+</div>
+
+    <div id="MyDiv" class="content">
+        <div style="text-align: right; cursor: pointer; height: 40px; margin-right: 15px; margin-top: 10px">
+            <span style="font-size: 20px;color: #ffffff; font-family: Verdana;" onclick="CloseDiv('MyDiv','fade', 'door_status1', 'door_status2')">Close</span>
+        </div>
+
+        <div id="door_status1">
+            <img src="../source/MainPage-09.png">
+        </div>
+
+        <div id="door_status2">
+            <img src="../source/MainPage-12.png">
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

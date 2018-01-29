@@ -3,68 +3,26 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>DOMISEP</title>
-    <link href="BedroomI_Page.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" charset="utf-8"></script>
+    <link href="MainPage1.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <!--This is the script for show and hide side bar-->
-    <script type="text/javascript">
-        $(function () {
-            $a = $(window).height();
-            $("#sidebar").height($a);
-            $("#collapse_btn").click(function () {
-                $("#sidebar").animate({left: '-280px'});
-                $("#show_btn").delay(500).animate({left: '0'});
-            });
-            $("#show_btn").click(function () {
-                $("#show_btn").animate({left: '-50px'});
-                $("#sidebar").delay(500).animate({left: '0'});
-            });
-        });
-    </script>
+    <script type="text/javascript" src="../JavaScript/Hideshow_Bar.js"></script>
 
     <!--This is the script for highlight the selected line-->
-    <script type="text/javascript">
-        $(function () {
-
-            $(".side_info dd").hide();
-            $(".side_info dl").mouseover(function () {
-
-                        $(this).css({
-                            "background-color": "rgba(30, 150, 237, 0.8)"
-                        });
-                    }
-            )
-            $(".side_info dl").mouseleave(function () {
-                $(".side_info dl").css({
-                    "background-color": " rgba(17, 26, 41, 0)"
-                });
-
-            })
-        })
-    </script>
+    <script type="text/javascript" src="../JavaScript/Highlight_Level.js"></script>
 
     <!--This is the script for show and hide second level menu-->
-    <script type="text/javascript">
-        $(function () {
+    <script type="text/javascript" src="../JavaScript/Hideshow_Level.js"></script>
 
-            $(".side_info dt").mouseover(function () {
+    <!--This is for display graph on the temperature part-->
+    <script type="text/javascript" src="BedroomI_Temp.js"></script>
 
-                        $(this).css({
-                            "background-color": "rgba(30, 150, 237, 0.8)"
-                        });
-                        $(this).stop(false, true).parent().find('dd').slideDown(300);
-                    }
-            )
-            $(".side_info dl").mouseleave(function () {
+    <!--This is for display graph on the humidity part-->
+    <script type="text/javascript" src="BedroomI_Hum.js"></script>
 
-                $(".side_info dt").css({
-                    "background-color": " rgba(17, 26, 41, 0"
-                });
-
-                $(this).parent().find('dd').stop(true, true).slideUp(300);
-
-            })
-        })
-    </script>
+    <script type="text/javascript" src="../Sensor/Door.js"></script>
 </head>
 <body>
 
@@ -112,7 +70,7 @@
                 <a href="#">
                     <img src="../source/Tab7.png" width="23" height="17"
                          style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                    <a class="Tab">Bedroom II</a>
+                    <a class="Tab" href="BedroomII_Page.html">Bedroom II</a>
                 </a>
             </dd>
 
@@ -120,7 +78,7 @@
                 <a href="#">
                     <img src="../source/Tab8.png" width="25" height="28"
                          style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                    <a class="Tab">Kitchen</a>
+                    <a class="Tab" href="Kitchen.html">Kitchen</a>
                 </a>
             </dd>
 
@@ -128,7 +86,7 @@
                 <a href="#">
                     <img src="../source/Tab9.png" width="25" height="24"
                          style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                    <a class="Tab">Garden</a>
+                    <a class="Tab" href="Garden.html">Garden</a>
                 </a>
             </dd>
         </dl>
@@ -144,7 +102,7 @@
                 <a href="#">
                     <img src="../source/icon2.png" width="23" height="23"
                          style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                    <a class="Tab">Temperature</a>
+                    <a class="Tab" href="../Sensor/Temperature.html">Temperature</a>
                 </a>
             </dd>
 
@@ -152,7 +110,7 @@
                 <a href="#">
                     <img src="../source/icon2.png" width="23" height="23"
                          style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                    <a class="Tab">Humidity</a>
+                    <a class="Tab" href="../Sensor/Humidity.html">Humidity</a>
                 </a>
             </dd>
 
@@ -160,7 +118,7 @@
                 <a href="#">
                     <img src="../source/Tab12.png" width="23" height="23"
                          style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                    <a class="Tab">Smoke</a>
+                    <a class="Tab"  href="../Sensor/Smoke.html">Smoke</a>
                 </a>
             </dd>
 
@@ -168,7 +126,7 @@
                 <a href="#">
                     <img src="../source/Tab13.png" width="23" height="19"
                          style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                    <a class="Tab">Window</a>
+                    <a class="Tab" href="../Sensor/Window.html">Window</a>
                 </a>
             </dd>
 
@@ -176,7 +134,7 @@
                 <a href="#">
                     <img src="../source/icon2.png" width="23" height="23"
                          style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                    <a class="Tab">Camera</a>
+                    <a class="Tab" href="../Sensor/Camera.html">Camera</a>
                 </a>
             </dd>
 
@@ -184,7 +142,7 @@
                 <a href="#">
                     <img src="../source/icon2.png" width="23" height="23"
                          style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                    <a class="Tab">Door</a>
+                    <a id="showdoor" class="Tab" onclick="ShowDiv('MyDiv','fade', 'door_status1', 'door_status2')">Door</a>
                 </a>
             </dd>
         </dl>
@@ -193,15 +151,7 @@
             <dt>
                 <img src="../source/Tab2.png" width="22" height="14"
                      style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                <a class="Tab">Message</a>
-            </dt>
-        </dl>
-
-        <dl class="List">
-            <dt>
-                <img src="../source/Tab3.png" width="20" height="20"
-                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                <a class="Tab">Settings</a>
+                <a class="Tab" href="../Message/Message.html" style="text-decoration: none">Message</a>
             </dt>
         </dl>
 
@@ -217,7 +167,7 @@
             <dt>
                 <img src="../source/Tab5.png" width="20" height="20"
                      style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
-                <a class="Tab">Help</a>
+                <a class="Tab" href="../Help/Help.html">Help</a>
             </dt>
         </dl>
     </div>
@@ -242,7 +192,7 @@
 
     <div class="sensor1">
         <table class="panel_title">
-            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+            <td width="15px" style="border-right: 4px solid #1d2532; height: 25px">
                 <img src="../source/Tab12.png">
             </td>
 
@@ -250,11 +200,27 @@
                 <span>Temperature</span>
             </td>
         </table>
+
+        <div id="sensor1_container1" style="width: inherit; height: 100px; margin-top: 2px;">
+            <table class="now_temp_table">
+                <td width="50%" style = " margin-right: 45px; border:0px; height: 80px;">
+                    <span>20:00</span>
+                </td>
+
+                <td width="50%" style = " margin-left:150px;  border:0px; height: 80px;">
+                    <span id="now_temp">22.7℃</span>
+                </td>
+            </table>
+        </div>
+
+        <div id="sensor1_container2" style="width: 95%; height: 260px; margin-right: 5px;">
+
+        </div>
     </div>
 
     <div class="sensor2">
         <table class="panel_title">
-            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+            <td width="15px" style="border-right: 4px solid #1d2532; height: 25px">
                 <img src="../source/Tab12.png">
             </td>
 
@@ -262,11 +228,27 @@
                 <span>Humidity</span>
             </td>
         </table>
+
+        <div id="sensor2_container1" style="width: inherit; height: 100px; margin-top: 2px;">
+            <table class="now_hum_table">
+                <td width="50%" style = " margin-right: 45px; border:0px; height: 80px;">
+                    <span>20:00</span>
+                </td>
+
+                <td width="50%" style = " margin-left:150px;  border:0px; height: 80px;">
+                    <span id="now_hum">32%</span>
+                </td>
+            </table>
+        </div>
+
+        <div id="sensor2_container2" style="width: 95%; height: 260px; margin-right: 5px;">
+
+        </div>
     </div>
 
     <div class="sensor3">
         <table class="panel_title">
-            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+            <td width="15px" style="border-right: 4px solid #1d2532; height: 25px">
                 <img src="../source/Tab12.png">
             </td>
 
@@ -274,11 +256,19 @@
                 <span>Smoke</span>
             </td>
         </table>
+
+        <div class="smoke_light">
+
+        </div>
+
+        <div class="smoke_status">
+            Normal
+        </div>
     </div>
 
     <div class="sensor4">
         <table class="panel_title">
-            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+            <td width="15px" style="border-right: 4px solid #1d2532; height: 25px">
                 <img src="../source/Tab12.png">
             </td>
 
@@ -286,11 +276,40 @@
                 <span>Window</span>
             </td>
         </table>
+
+        <table>
+            <tr style="line-height: 30px; margin-top: 30px">
+                <span style=" color: #ffffff; font-family: Frutiger; font-size: 30px; margin-left: 10%; margin-top: 10%;">Window1</span>
+                <span style=" color: #ffffff; font-family: Frutiger; font-size: 30px; margin-left: 20%; margin-top: 10%;">Window2</span>
+            </tr>
+
+            <td style="line-height: 50px">
+                <div class="window1">
+                    <label>
+                        <input type="checkbox" class="Window1_status" checked>
+                        <div>
+                            <div></div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="window2">
+                    <label class="window2">
+                        <input type="checkbox" class="Window2_status" checked>
+                        <div>
+                            <div></div>
+                        </div>
+                    </label>
+                </div>
+            </td>
+
+        </table>
+
     </div>
 
     <div class="sensor5">
         <table class="panel_title">
-            <td width="15px" style="border-right: 2px solid #ffffff; height: 25px">
+            <td width="15px" style="border-right: 4px solid #1d2532; height: 25px">
                 <img src="../source/Tab12.png">
             </td>
 
@@ -298,6 +317,24 @@
                 <span>Camera</span>
             </td>
         </table>
+    </div>
+
+    <div id="fade" class="black_overlay">
+
+    </div>
+
+    <div id="MyDiv" class="content">
+        <div style="text-align: right; cursor: pointer; height: 40px; margin-right: 15px; margin-top: 10px">
+            <span style="font-size: 20px;color: #ffffff; font-family: Verdana;" onclick="CloseDiv('MyDiv','fade', 'door_status1', 'door_status2')">Close</span>
+        </div>
+
+        <div id="door_status1">
+            <img src="../source/MainPage-09.png">
+        </div>
+
+        <div id="door_status2">
+            <img src="../source/MainPage-12.png">
+        </div>
     </div>
 </div>
 

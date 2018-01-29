@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="Test.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="TT.js"></script>
+</head>
+
+<script>
+    function checkpwdlen() {
+        var password = document.getElementById("pwd");
+
+        var obj = document.getElementById("pss");
+
+        if (password.value.length < 8)
+        {
+            obj.innerHTML = "<font size=2 color=red>login trop court!</font>";
+            return false;
+        }
+
+        else
+        {
+            obj.innerHTML = "<font size=2 color=green>OK</font>";
+            return true;
+        }
+    }
+
+    function checkpwdver() {
+        var password = document.getElementById("pwd");
+        var repassword = document.getElementById("repwd");
+
+        var obj = document.getElementById("repss");
+
+        if (password.value == repassword.value)
+        {
+            obj.innerHTML = "<font size=2 color=green>√</font>";
+            return true;
+        }
+        else
+        {
+            obj.innerHTML = "<font size=2 color=red>×</font>";
+            return false;
+        }
+    }
+</script>
+
+<body>
+
+<div class="main">
+    <h1>Formulaire d'Inscription</h1>
+    <form method="post" action="TT.php" target = "id_frame">
+        <table>
+            <tr>
+                <td style="text-align: right">
+                    <span>Login</span>
+                </td>
+                <td>
+                    <input name="login" placeholder="RobinXYuan">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    <span>Paswsword</span>
+                </td>
+                <td>
+                    <input name="pass" id="pwd" type="password" onChange = "checkpwdlen()" onblur = "checkpwdlen()"/>
+                    <span id="pss"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    <span>Password Repeat</span>
+                </td>
+                <td>
+                    <input name="repass" id="repwd" type="password" onChange = "checkpwdver()" onblur = "checkpwdver()"/>
+                    <span id="repss"></span>
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn">
+            <button id = "envoyer">Envoyer</button>
+        </div>
+
+    </form>
+</div>
+
+<iframe id = "id_frame" name = "id_frame" style = "border: 0px;"></iframe>
+
+</body>
+</html>

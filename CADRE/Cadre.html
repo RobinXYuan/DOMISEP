@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOMISEP</title>
+    <link href="Cadre.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+
+    <!--This is the script for show and hide side bar-->
+    <script type="text/javascript" src="../JavaScript/Hideshow_Bar.js"></script>
+
+    <!--This is the script for highlight the selected line-->
+    <script type="text/javascript" src="../JavaScript/Highlight_Level.js"></script>
+
+    <!--This is the script for show and hide second level menu-->
+    <script type="text/javascript" src="../JavaScript/Hideshow_Level.js"></script>
+
+    <script type="text/javascript" src="../Sensor/Door.js"></script>
+
+    <script type="text/javascript" src="Cadre.js"></script>
+</head>
+<body>
+
+<div id="Page_header">
+    <table class="header">
+        <tr>
+            <td style="width: 500px; text-align: left;">
+                <img src="../source/icon2.png" width="40" height="40" style="margin-left: 10px; margin-bottom: 2px">
+                <span style="color: white; font-family: Verdana; font-size: 28px; margin-left: 20px;">DOMISEP</span>
+            </td>
+            <td style="width: 1380px; text-align: right; margin-right: 25px">
+                <img src="../source/icon1.png">
+                <input class="search" placeholder="search">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="sidebar">
+    <li class="List"><img src="../source/photo.png" class="user_photo"></li>
+    <div class="side_info">
+        <dl class="list_room">
+            <dt>
+                <img src="../source/icon2.png" width="23" height="23"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <span class="Tab">Room</span>
+            </dt>
+            <dd class="first_dd">
+                <a href="#">
+                    <img src="../source/Tab1.png" width="24" height="20"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" onclick="Mainclick()">Living Room</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab7.png" width="23" height="17"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" onclick="Bed1click()"">Bedroom I</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab7.png" width="23" height="17"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" onclick="Bed2click()">Bedroom II</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab8.png" width="25" height="28"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" onclick="Kitclick()">Kitchen</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab9.png" width="25" height="24"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" onclick="Gardenclick()">Garden</a>
+                </a>
+            </dd>
+        </dl>
+
+        <dl class="list_sensor">
+            <dt>
+                <img src="../source/icon2.png" width="23" height="23"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <a class="Tab">Sensor</a>
+            </dt>
+
+            <dd class="first_dd">
+                <a href="#">
+                    <img src="../source/icon2.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" onclick="Tempclick()">Temperature</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/icon2.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" onclick="Humclick()">Humidity</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab12.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab"  onclick="Smokeclick()">Smoke</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/Tab13.png" width="23" height="19"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" onclick="Windowclick()">Window</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/icon2.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a class="Tab" onclick="Cameraclick()">Camera</a>
+                </a>
+            </dd>
+
+            <dd>
+                <a href="#">
+                    <img src="../source/icon2.png" width="23" height="23"
+                         style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                    <a id="showdoor" class="Tab" onclick="ShowDiv('MyDiv','fade', 'door_status1', 'door_status2')">Door</a>
+                </a>
+            </dd>
+        </dl>
+
+        <dl class="List">
+            <dt>
+                <img src="../source/Tab2.png" width="22" height="14"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <a class="Tab" onclick="Msgclick()" style="text-decoration: none">Message</a>
+            </dt>
+        </dl>
+
+        <dl class="List">
+            <dt>
+                <img src="../source/Tab4.png" width="16" height="20"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <a class="Tab" onclick="Acctclick()"">Account</a>
+            </dt>
+        </dl>
+
+        <dl class="List">
+            <dt>
+                <img src="../source/Tab5.png" width="20" height="20"
+                     style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px">
+                <a class="Tab" onclick="Helpclick()" style="text-decoration: none">Help</a>
+            </dt>
+        </dl>
+    </div>
+
+    <div id="collapse_btn">
+        <img src="../source/Tab6.png" width="20" height="20"
+             style="vertical-align: middle; margin-left: 25px; margin-bottom: 10px">
+        <span class="collapse">Collapse Menu</span>
+    </div>
+
+</div>
+
+<div id="show_btn">
+    <img src="../source/Tab6.png" width="20" height="20" style="margin-bottom: -30px">
+</div>
+
+<div id="main" style="height: 950px; width: 1400px">
+
+
+    <div id="fade" class="black_overlay">
+
+    </div>
+
+    <div id="MyDiv" class="content">
+        <div style="text-align: right; cursor: pointer; height: 40px; margin-right: 15px; margin-top: 10px">
+            <span style="font-size: 20px;color: #ffffff; font-family: Verdana;" onclick="CloseDiv('MyDiv','fade', 'door_status1', 'door_status2')">Close</span>
+        </div>
+
+        <div id="door_status1">
+            <img src="../source/MainPage-09.png">
+        </div>
+
+        <div id="door_status2">
+            <img src="../source/MainPage-12.png">
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

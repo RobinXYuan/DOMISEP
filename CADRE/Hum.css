@@ -1,0 +1,185 @@
+/*body{*/
+    /*background-image: url("../source/Do2.png");*/
+    /*background-position: center center;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: scroll;*/
+    /*height: 150%;*/
+    /*margin: 0 auto;*/
+    /*padding: 0;*/
+/*}*/
+
+img{
+    vertical-align: middle;
+    border: none;
+}
+
+::-webkit-scrollbar{
+    width:0px
+}
+
+.black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 26, 41, 0.6);
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    /*filter: alpha(opacity=80);*/
+}
+
+.content {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    /*border: 16px solid lightblue;*/
+    background-color: rgba(17, 26, 41, 0.8);
+    z-index:1002;
+    overflow: auto;
+}
+
+#door_status1{
+    float: left;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+#door_status1 img{
+    width: 70%;
+    height: 70%;
+}
+
+#door_status2{
+    float: right;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+#door_status2 img{
+    width: 70%;
+    height: 70%;
+}
+
+.white_content_small {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 50%;
+    border: 16px solid lightblue;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+}
+
+/*This part is for the body of the web page*/
+#main{
+    display: table-cell;
+}
+
+.main_title{
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+.img_main_title{
+    margin-bottom: 14px;
+}
+
+.text_main_title{
+    margin-left: 10px;
+    font-size: 36px;
+    font-family: Frutiger;
+    color: #ffffff;
+}
+
+.sensor1{;
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 400px;
+    position: relative;
+    height: 420px;
+    background-color: rgba(17, 26, 41, 0.8);
+}
+
+.sensor2{;
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 400px;
+    position: relative;
+    height: 420px;
+    background-color: rgba(17, 26, 41, 0.8);
+}
+
+.sensor3{;
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 400px;
+    position: relative;
+    height: 420px;
+    background-color: rgba(17, 26, 41, 0.8);
+}
+
+.sensor4{;
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 400px;
+    position: relative;
+    height: 420px;
+    background-color: rgba(17, 26, 41, 0.8);
+}
+/*For the header of each sensor panel*/
+.panel_title{
+    width: inherit;
+    border-bottom: 4px solid #1d2532;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.panel_title img{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.panel_title span{
+    color: #ffffff;
+    font-family: Frutiger;
+    font-size: 32px;
+    margin-left: 20px;
+    margin-top: 10px;
+    /*margin-bottom: 10px;*/
+}
+
+/*For the humidity sensor*/
+.now_hum_table{
+    width: inherit;
+    vertical-align: middle;
+}
+
+.now_hum_table span{
+    color: #ffffff;
+    font-family: Frutiger;
+    font-size: 36px;
+    margin-left: 20%;
+    margin-top: 10px;
+    /*margin-bottom: 10px;*/
+}
+
+#now_hum, #now_hum2, #now_hum3 {
+    margin-left: 40%;
+}
